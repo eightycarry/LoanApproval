@@ -8,6 +8,29 @@
     <script src="loan.js"></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Diamond Lending Bank</h1>
 
+        <fieldset>
+            <form id="loanForm">
+                <div class="salary">
+                    <label for="salary">Please enter your annual salary: </label>
+                    <input type="number" id="salary" name="salary">
+                    <br>
+                </div>
+                <div class="credit">
+                    <label for="credit">Please enter your credit score: </label>
+                    <input type="number" id="credit" name="credit">
+                </div>
+
+                <button id="loanButton">Check to see if you're approved!</button>
+            </form>
+        </fieldset>
+
+        <p class="loanApproval">
+            <span id="outputLoan"></span>
+        </p>
+
+    </div>
 </body>
 </html>
