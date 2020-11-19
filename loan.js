@@ -36,12 +36,17 @@ $(document).ready(function () {
     // Needs submitHandler, rules, and messages properties
     $("form").validate(
         {
-            submitHandler: calculateBMI,
+            submitHandler: loanApproval,
             rules: myRules,
             messages: myMessages
         }
     );
 
+    $("#loanButton").click(loanApproval);
 
+    function loanApproval() {
+        var salary = parseInt($("#salary").val());
+        var creditScore = parseInt($("#credit").val());
+    }
 
 });
