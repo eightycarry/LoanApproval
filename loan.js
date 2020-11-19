@@ -3,7 +3,8 @@ $(document).ready(function () {
         {
             salary: {
                 required: true,
-                digits: true
+                digits: true,
+
             },
 
             credit: {
@@ -22,16 +23,14 @@ $(document).ready(function () {
     var myMessages =
         {
             salary: {
-                required: "Must enter your height",
-                min: "Height must be between 59 and 79 inches",
-                max: "Height must be between 59 and 79 inches",
-                digits: "Numbers only please!"
+                required: "Must enter your salary",
+                digits: "Numbers only please!",
             },
 
             credit: {
-                required: "Must enter your weight",
-                min: "Weight must be between 88lbs and 353 lbs",
-                max: "Weight must be between 88lbs and 353 lbs",
+                required: "Must enter your credit score",
+                min: "Credit score must be between 300 and 850",
+                max: "Credit score must be between 300 and 850",
                 digits: "Numbers only please!"
             }
         }
@@ -54,11 +53,11 @@ $(document).ready(function () {
         var months = parseInt($("#months").val());
 
         if ((salary >= 40000) && (creditScore >= 600)) {
-            $("#outputLoan").text("Loan approved");
+            $("#outputLoan").text("Loan approved!");
         } else if ((salary >= 40000) && (creditScore < 600) && (months > 12)) {
-            $("#outputLoan").text("Loan approved");
+            $("#outputLoan").text("Loan approved!");
         } else if ((salary < 40000) && (creditScore >= 600) && (months > 12)) {
-            $("#outputLoan").text("Loan approved");
+            $("#outputLoan").text("Loan approved!");
         } else if (months < 12) {
             $("#outputLoan").text("Loan denied");
         } else {
