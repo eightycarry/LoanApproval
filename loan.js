@@ -11,6 +11,10 @@ $(document).ready(function () {
                 min: 300,
                 max: 850,
                 digits: true
+            },
+
+            months: {
+                required: true,
             }
         };
 
@@ -47,6 +51,27 @@ $(document).ready(function () {
     function loanApproval() {
         var salary = parseInt($("#salary").val());
         var creditScore = parseInt($("#credit").val());
+        var months = parseInt($("#months").val());
+
+        if ((salary >= 40000) && (creditScore >= 600)) {
+            $("#outputLoan").text("Loan approved");
+        } else if ((salary >= 40000) && (creditScore < 600) && (months > 12)) {
+            $("#outputLoan").text("Loan approved");
+        } else if ((salary < 40000) && (creditScore >= 600) && (months > 12)) {
+            $("#outputLoan").text("Loan approved");
+        } else if (months < 12) {
+            $("#outputLoan").text("Loan denied");
+        } else {
+            $("#outputLoan").text("Loan denied");
+        }
+
+        /*if (salary >= 40000 && creditScore >= 600) {
+            $("#outputLoan").text("Loan approved");
+        } else if (salary >= 40000 && creditScore < 600 && months > 12) {
+            $("#outputLoan").text("Loan approved");
+        } else if (salary >= 40000 && creditScore < 600 && months < 12) {
+            $("#outputLoan").text("Loan denied");
+        }*/
     }
 
 });
