@@ -42,7 +42,7 @@ $(document).ready(function () {
             },
 
             months: {
-                required: "Must enter the amount of months you've been working at your current job",
+                required: "Please enter the amount of months you've been working at your current job",
                 min: "Cannot enter a negative amount!",
                 max: "You've been there a long time!",
                 digits: "Numbers only please!"
