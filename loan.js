@@ -4,6 +4,8 @@ $(document).ready(function () {
             salary: {
                 required: true,
                 digits: true,
+                min: 1,
+                max: 1000000
 
             },
 
@@ -16,7 +18,10 @@ $(document).ready(function () {
 
             months: {
                 required: true,
-            }
+                min: 0,
+                max: 1000000,
+                digits: true
+            },
         };
 
     // Object containing the error messages
@@ -25,6 +30,8 @@ $(document).ready(function () {
             salary: {
                 required: "Must enter your salary",
                 digits: "Numbers only please!",
+                min: "Salary must be higher than 0",
+                max: "You probably shouldn't even be using this website"
             },
 
             credit: {
@@ -32,7 +39,14 @@ $(document).ready(function () {
                 min: "Credit score must be between 300 and 850",
                 max: "Credit score must be between 300 and 850",
                 digits: "Numbers only please!"
-            }
+            },
+
+            months: {
+                required: "Must enter the amount of months you've been working at your current job",
+                min: "Please enter a number greater than or equal to zero",
+                max: "You've been there a long time!",
+                digits: "Numbers only please!"
+            },
         }
 
     // Pass the configuration to the form's validate() method
