@@ -3,9 +3,9 @@ $(document).ready(function () {
         {
             salary: {
                 required: true,
-                digits: true,
-                min: 1,
-                max: 1000000
+                min: 0,
+                max: 1000000,
+                digits: true
 
             },
 
@@ -30,7 +30,7 @@ $(document).ready(function () {
             salary: {
                 required: "Must enter your salary",
                 digits: "Numbers only please!",
-                min: "Salary must be higher than 0",
+                min: "Your salary cannot be negative!",
                 max: "You probably shouldn't even be using this website"
             },
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
 
             months: {
                 required: "Must enter the amount of months you've been working at your current job",
-                min: "Please enter a number greater than or equal to zero",
+                min: "Cannot enter a negative amount!",
                 max: "You've been there a long time!",
                 digits: "Numbers only please!"
             },
@@ -73,9 +73,9 @@ $(document).ready(function () {
         } else if ((salary < 40000) && (creditScore >= 600) && (months > 12)) {
             $("#outputLoan").text("Loan approved!");
         } else if (months < 12) {
-            $("#outputLoan").text("Loan denied");
+            $("#outputLoan").text("Loan not approved.");
         } else {
-            $("#outputLoan").text("Loan denied");
+            $("#outputLoan").text("Loan not approved.");
         }
 
         /*if (salary >= 40000 && creditScore >= 600) {
